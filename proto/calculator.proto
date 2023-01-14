@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package calculator;
+
+message Add {
+  int32 amount = 1;
+}
+message Mul {
+  int32 amount = 1;
+}
+
+message Op {
+  oneof op {
+    Add add = 1;
+    Mul mul = 2;
+  }
+}
+
+service Calculator {
+  rpc calc(stream Op) returns (stream Op) {}
+}

@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+        "calc-tonic",
+        "calc-client",
+        "calc-grpcio",
+]
